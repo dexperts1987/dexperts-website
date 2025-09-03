@@ -1,73 +1,49 @@
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f8fbff;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
   color: #333;
 }
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #007acc;
-  padding: 10px 20px;
-}
-header .logo {
-  height: 50px;
-}
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-nav ul li {
-  margin: 0 10px;
-}
-nav ul li a {
-  text-decoration: none;
+  background: #222;
   color: white;
-  font-weight: bold;
+  padding: 1em;
+  text-align: center;
 }
-nav ul li a.active {
-  border-bottom: 2px solid white;
+header nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+header nav a:hover {
+  text-decoration: underline;
+}
+main {
+  padding: 2em;
+}
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  margin-top: 2em;
 }
 .hero {
   text-align: center;
-  padding: 100px 20px;
-  background: linear-gradient(to right, #00aaff, #007acc);
-  color: white;
+  padding: 2em;
+  background: #eaf2ff;
+  border-radius: 8px;
 }
 .hero .btn {
   display: inline-block;
-  margin-top: 20px;
+  margin: 10px;
   padding: 10px 20px;
-  background: white;
-  color: #007acc;
+  background: #007BFF;
+  color: white;
+  border-radius: 5px;
   text-decoration: none;
-  border-radius: 5px;
 }
-main {
-  padding: 20px;
-}
-footer {
-  color: white;
-  text-align: center;
-  padding: 20px;
-  background-size: cover;
-  background-position: center;
-}
-form input, form textarea {
-  width: 100%;
-  margin: 5px 0;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-form button {
-  padding: 10px 20px;
-  background: #007acc;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.hero .btn:hover {
+  background: #0056b3;
 }
