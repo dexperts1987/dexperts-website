@@ -1,13 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - DEXPERTS</title>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - DEXPERTS Survey Research Project Showcase</title>
     <meta
-      name="description"
-      content="Explore our successful projects and see how we've helped clients transform their survey research workflows."
-    />
+        name="description"
+        content="Explore our successful projects and see how we've helped clients transform their survey research workflows."
+    >
+    <meta name="keywords" content="DEXPERTS portfolio, survey projects, research case studies, automation success stories, client testimonials, survey platform development">
+    <meta name="author" content="DEXPERTS">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://dexperts.in/portfolio/">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Portfolio - DEXPERTS Survey Research Project Showcase">
+    <meta property="og:description" content="Explore our successful projects and see how we've helped clients transform their survey research workflows with innovative solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dexperts.in/portfolio/">
+    <meta property="og:image" content="https://dexperts.in/assets/images/Logo.jpeg">
+    <meta property="og:site_name" content="DEXPERTS">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DEXPERTS Portfolio - Survey Research Projects">
+    <meta name="twitter:description" content="See how we've transformed survey research workflows for our clients with innovative automation solutions.">
+    <meta name="twitter:image" content="https://dexperts.in/assets/images/Logo.jpeg">
+    
+    <!-- Additional Meta Tags -->
+    <meta name="theme-color" content="#007acc">
+    <meta name="msapplication-TileColor" content="#007acc">
+    
+    <!-- Essential Favicon Implementation (SEO Optimized) -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/images/favicon-48x48.png">
+    
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+    
+    <!-- Android Chrome Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/android-chrome-512x512.png">
+    
+    <!-- Portfolio Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "DEXPERTS Portfolio",
+        "description": "Showcase of successful survey research automation projects and client success stories",
+        "url": "https://dexperts.in/portfolio/",
+        "mainEntity": {
+            "@type": "ItemList",
+            "name": "DEXPERTS Projects",
+            "itemListElement": [
+                {
+                    "@type": "CreativeWork",
+                    "name": "Quick Survey Launch",
+                    "description": "20-question survey delivered in 3 days using automated XML generation",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "DEXPERTS"
+                    },
+                    "category": "Survey Automation"
+                },
+                {
+                    "@type": "CreativeWork", 
+                    "name": "Complex Logic Implementation",
+                    "description": "Multi-branched survey with complex routing implemented efficiently",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "DEXPERTS"
+                    },
+                    "category": "Custom Development"
+                },
+                {
+                    "@type": "CreativeWork",
+                    "name": "High-Volume Processing", 
+                    "description": "200+ question survey generated with 99% accuracy in minutes",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "DEXPERTS"
+                    },
+                    "category": "XML Generation"
+                }
+            ]
+        }
+    }
+    </script>
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -17,87 +100,87 @@
 
     <!-- Custom Tailwind Configuration -->
     <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: {
-                50: "#eff6ff",
-                100: "#dbeafe",
-                200: "#bfdbfe",
-                300: "#93c5fd",
-                400: "#60a5fa",
-                500: "#3b82f6",
-                600: "#2563eb",
-                700: "#1d4ed8",
-                800: "#1e40af",
-                900: "#1e3a8a",
-              },
-              dexperts: {
-                blue: "#007acc",
-                dark: "#1a202c",
-                gray: "#f4f4f4",
-              },
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: "#eff6ff",
+                            100: "#dbeafe",
+                            200: "#bfdbfe",
+                            300: "#93c5fd",
+                            400: "#60a5fa",
+                            500: "#3b82f6",
+                            600: "#2563eb",
+                            700: "#1d4ed8",
+                            800: "#1e40af",
+                            900: "#1e3a8a",
+                        },
+                        dexperts: {
+                            blue: "#007acc",
+                            dark: "#1a202c",
+                            gray: "#f4f4f4",
+                        },
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "system-ui", "sans-serif"],
+                    },
+                    animation: {
+                        "fade-in": "fadeIn 0.5s ease-in-out",
+                        "slide-up": "slideUp 0.6s ease-out",
+                        float: "float 6s ease-in-out infinite",
+                    },
+                },
             },
-            fontFamily: {
-              sans: ["Inter", "system-ui", "sans-serif"],
-            },
-            animation: {
-              "fade-in": "fadeIn 0.5s ease-in-out",
-              "slide-up": "slideUp 0.6s ease-out",
-              float: "float 6s ease-in-out infinite",
-            },
-          },
-        },
-      };
+        };
     </script>
 
     <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
 
     <!-- Font Awesome for icons -->
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    >
 
     <!-- Custom CSS -->
     <style>
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
-        to {
-          opacity: 1;
-        }
-      }
 
-      @keyframes slideUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
 
-      @keyframes float {
-        0%,
-        100% {
-          transform: translateY(0px);
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
         }
-        50% {
-          transform: translateY(-20px);
-        }
-      }
 
-      .gradient-bg {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       }
 
       .glass-effect {
@@ -175,10 +258,10 @@
         background-color: #f9fafb;
         position: relative;
         z-index: 1;
-      }
+        }
     </style>
-  </head>
-  <body class="font-sans antialiased">
+</head>
+<body class="font-sans antialiased">
     <!-- Navigation -->
     <nav
       class="fixed w-full z-50 navbar-transition navbar-transparent top-0"
@@ -194,7 +277,7 @@
             >
               <img
                 src="../assets/images/Logo.jpeg"
-                alt="DEXPERTS Logo"
+                alt="DEXPERTS Logo - Survey Research Solutions"
                 class="h-16 w-auto object-contain"
               />
             </a>
@@ -1017,5 +1100,5 @@
           filterPortfolioItems("all", "");
         });
     </script>
-  </body>
+</body>
 </html>
