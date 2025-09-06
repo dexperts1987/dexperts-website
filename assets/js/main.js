@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const run = () => {
                     if (count < target) {
                         count += increment;
-                        if (count > target) count = target;
+                        count = Math.min(count, target);
                         counter.textContent = count + suffix;
                         setTimeout(run, 20);
                     } else {
@@ -69,7 +69,9 @@ document.addEventListener('DOMContentLoaded', function () {
     let statsAnimated = false;
     function onScroll() {
         const statsSection = document.querySelector('.stats-section');
-        if (!statsSection) return;
+        if (!statsSection) {
+          return;
+        }
         const rect = statsSection.getBoundingClientRect();
         if (!statsAnimated && rect.top < window.innerHeight - 100) {
             animateCounters();
