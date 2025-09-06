@@ -1,0 +1,35 @@
+{
+    "name": "DEXPERTS - Survey Research Solutions",
+    "short_name": "DEXPERTS",
+    "description": "Innovative survey research automation tools and XML generation solutions",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#007acc",
+    "orientation": "portrait-primary",
+    "categories": ["business", "productivity", "utilities"],
+    "lang": "en",
+    "dir": "ltr",
+    "icons": [
+        {
+            "src": "assets/images/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "assets/images/android-chrome-512x512.png",
+            "sizes": "512x512", 
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "assets/images/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png",
+            "purpose": "any"
+        }
+    ],
+    "scope": "/",
+    "prefer_related_applications": false
+}

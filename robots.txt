@@ -1,0 +1,37 @@
+User-agent: *
+Allow: /
+
+# Allow all crawlers access to CSS, JS, and image assets
+Allow: /assets/
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/images/
+
+# Disallow crawling of any temporary or development files
+Disallow: /temp/
+Disallow: /dev/
+Disallow: /*.tmp$
+Disallow: /*.bak$
+
+# Sitemap
+Sitemap: https://dexperts.in/sitemap.xml
+
+# Crawl-delay for all bots (1 second)
+Crawl-delay: 1
+
+# Specific bot instructions
+User-agent: Googlebot
+Crawl-delay: 1
+
+User-agent: Bingbot
+Crawl-delay: 1
+
+# Allow social media bots for better sharing
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
