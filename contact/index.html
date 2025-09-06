@@ -100,6 +100,37 @@
             background-clip: text;
         }
         
+        /* Prevent browser default invalid styling */
+        input:invalid,
+        select:invalid,
+        textarea:invalid {
+            border-color: #d1d5db !important;
+            box-shadow: none !important;
+            outline: none !important;
+        }
+        
+        /* Remove browser validation styling completely */
+        input:not(:focus):invalid,
+        select:not(:focus):invalid,
+        textarea:not(:focus):invalid {
+            border-color: #d1d5db !important;
+            box-shadow: none !important;
+        }
+        
+        /* Force normal border color for form fields */
+        input,
+        select,
+        textarea {
+            border-color: #d1d5db !important;
+        }
+        
+        /* Only show validation styling when explicitly added */
+        input.border-red-500,
+        select.border-red-500,
+        textarea.border-red-500 {
+            border-color: #ef4444 !important;
+        }
+        
                 /* Navbar Scroll Effect - Universal Solution */
 .navbar-transparent {
   background-color: transparent;
@@ -315,7 +346,7 @@
                         </div>
                     </div>
                     
-                    <form id="contact-form" class="space-y-6">
+                    <form id="contact-form" class="space-y-6" novalidate>
                         <!-- Name and Email Row -->
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
@@ -700,6 +731,13 @@
             
             // Reset form
             this.reset();
+            
+            // Ensure all fields have proper styling after reset
+            const formFields = this.querySelectorAll('input, select, textarea');
+            formFields.forEach(field => {
+                field.classList.remove('border-red-500', 'ring-red-500');
+                field.style.borderColor = '#d1d5db';
+            });
             
             // Auto-hide message after 5 seconds
             setTimeout(() => {
