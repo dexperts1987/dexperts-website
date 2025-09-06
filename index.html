@@ -102,49 +102,6 @@
             background-clip: text;
         }
         
-        /* Navbar Scroll Effect - Universal Solution */
-        .navbar-transparent {
-            background-color: transparent;
-            backdrop-filter: none;
-            box-shadow: none;
-        }
-        
-        .navbar-transparent .nav-link {
-            color: white;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-        }
-        
-        .navbar-transparent .nav-link:hover {
-            color: #93c5fd;
-        }
-        
-        .navbar-transparent .mobile-menu-btn {
-            color: white;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-        }
-        
-        .navbar-scrolled {
-            background-color: #1a5a84ff;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        .navbar-scrolled .nav-link {
-            color: white;
-        }
-        
-        .navbar-scrolled .nav-link:hover {
-            color: #93c5fd;
-        }
-        
-        .navbar-scrolled .mobile-menu-btn {
-            color: white;
-        }
-        
-        .navbar-transition {
-            transition: all 0.3s ease-in-out;
-        }
-        
         /* Universal Hero Section Support */
         .page-hero {
             margin-top: -80px;
@@ -157,71 +114,155 @@
             position: relative;
             z-index: 1;
         }
+
+        /* Navbar Scroll Effect - Universal Solution */
+.navbar-transparent {
+  background-color: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
+}
+
+.navbar-transparent .nav-link {
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-transparent .nav-link:hover {
+  color: #93c5fd;
+}
+
+.navbar-transparent .mobile-menu-btn {
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-scrolled {
+  background-color: #1a5a84ff;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-scrolled .nav-link {
+  color: white;
+}
+
+.navbar-scrolled .nav-link:hover {
+  color: #93c5fd;
+}
+
+.navbar-scrolled .mobile-menu-btn {
+  color: white;
+}
+
+.navbar-transition {
+  transition: all 0.3s ease-in-out;
+}
+
     </style>
 </head>
 <body class="font-sans antialiased">
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 navbar-transition navbar-transparent" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
-                <div class="flex items-center">
-                    <a href="index.html" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
-                        <img src="assets/images/Logo.jpeg" alt="DEXPERTS Logo" class="h-16 w-auto object-contain">
-                    </a>
-                </div>
-                
-                <!-- Desktop Navigation -->
-                <div class="hidden md:block">
-                    <div class="flex items-center space-x-8">
-                        <a href="index.html" class="nav-link text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                            Home
-                        </a>
-                        <a href="about/" class="nav-link text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                            About
-                        </a>
-                        <a href="services/" class="nav-link text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                            Services
-                        </a>
-                        <a href="portfolio/" class="nav-link text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                            Portfolio
-                        </a>
-                        <a href="contact/" class="bg-white text-dexperts-blue px-6 py-2 rounded-full hover:bg-blue-50 transition-colors font-medium">
-                            Contact Us
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Mobile menu button -->
-                <div class="md:hidden">
-                    <button type="button" class="mobile-menu-btn hover:text-blue-300 focus:outline-none focus:text-blue-300" id="mobile-menu-btn">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
+        <!-- Navigation -->
+    <nav
+      class="fixed w-full z-50 navbar-transition navbar-transparent top-0"
+      id="navbar"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <a
+              href="/"
+              class="flex items-center space-x-3 hover:opacity-80 transition-opacity"
+            >
+              <img
+                src="../assets/images/Logo.jpeg"
+                alt="DEXPERTS Logo"
+                class="h-16 w-auto object-contain"
+              />
+            </a>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:block">
+            <div class="flex items-center space-x-8">
+              <a
+                href="/"
+                class="nav-link text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >
+                Home
+              </a>
+              <a
+                href="/about"
+                class="nav-link text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >
+                About
+              </a>
+              <a
+                href="/services"
+                class="nav-link text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >
+                Services
+              </a>
+              <a
+                href="/portfolio"
+                class="nav-link text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >
+                Portfolio
+              </a>
+              <a
+                href="/contact"
+                class="bg-white text-dexperts-blue px-6 py-2 rounded-full hover:bg-blue-50 transition-colors font-medium"
+              >
+                Contact Us
+              </a>
             </div>
-            
-            <!-- Mobile Navigation -->
-            <div class="md:hidden hidden" id="mobile-menu">
-                <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
-                    <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-dexperts-blue font-medium">Home</a>
-                    <a href="about/" class="block px-3 py-2 text-gray-700 hover:text-dexperts-blue font-medium">About</a>
-                    <a href="services/" class="block px-3 py-2 text-gray-700 hover:text-dexperts-blue font-medium">Services</a>
-                    <a href="portfolio/" class="block px-3 py-2 text-gray-700 hover:text-dexperts-blue font-medium">Portfolio</a>
-                    <a href="contact/" class="block px-3 py-2 text-gray-700 hover:text-dexperts-blue font-medium">Contact</a>
-                </div>
-            </div>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden">
+            <button
+              type="button"
+              class="mobile-menu-btn hover:text-blue-300 focus:outline-none focus:text-blue-300"
+              id="mobile-menu-btn"
+            >
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
         </div>
-    </nav>
-            <div class="md:hidden hidden" id="mobile-menu">
-                <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
-                    <a href="index.html" class="block px-3 py-2 text-dexperts-blue font-medium">Home</a>
-                    <a href="about/" class="block px-3 py-2 text-gray-700 hover:text-dexperts-blue font-medium">About</a>
-                    <a href="services/" class="block px-3 py-2 text-gray-700 hover:text-dexperts-blue font-medium">Services</a>
-                    <a href="portfolio/" class="block px-3 py-2 text-gray-700 hover:text-dexperts-blue font-medium">Portfolio</a>
-                    <a href="contact/" class="block px-3 py-2 text-gray-700 hover:text-dexperts-blue font-medium">Contact</a>
-                </div>
-            </div>
+
+        <!-- Mobile Navigation -->
+        <div class="md:hidden hidden" id="mobile-menu">
+          <div
+            class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200"
+          >
+            <a
+              href="/"
+              class="block px-3 py-2 text-gray-700 hover:text-dexperts-blue font-medium"
+              >Home</a
+            >
+            <a
+              href="/about"
+              class="block px-3 py-2 text-gray-700 hover:text-dexperts-blue font-medium"
+              >About</a
+            >
+            <a
+              href="/services"
+              class="block px-3 py-2 text-gray-700 hover:text-dexperts-blue font-medium"
+              >Services</a
+            >
+            <a
+              href="/portfolio"
+              class="block px-3 py-2 text-gray-700 hover:text-dexperts-blue font-medium"
+              >Portfolio</a
+            >
+            <a
+              href="/contact"
+              class="block px-3 py-2 text-gray-700 hover:text-dexperts-blue font-medium"
+              >Contact</a
+            >
+          </div>
         </div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
