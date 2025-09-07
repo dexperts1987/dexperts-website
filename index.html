@@ -42,7 +42,7 @@
     <!-- Preload critical resources -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
     <link rel="preload" href="assets/images/Logo.jpeg" as="image">
-    <link rel="preload" href="assets/images/Back_Cover.png" as="image">
+    <link rel="preload" href="assets/images/Back_Cover_1.svg" as="image">
     
     <!-- DNS Prefetch for external resources -->
     <link rel="dns-prefetch" href="//cdn.tailwindcss.com">
@@ -329,6 +329,72 @@
   transition: all 0.3s ease-in-out;
 }
 
+/* iPhone SE and small height device optimizations */
+@media screen and (max-height: 700px) {
+  .hero-section-mobile {
+    padding-top: 5rem !important;
+    padding-bottom: 1rem !important;
+  }
+  
+  .hero-brand-text h1 {
+    font-size: 2rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+  
+  .hero-brand-text p {
+    font-size: 0.875rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .hero-main-content h2 {
+    font-size: 1.125rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+  
+  .hero-main-content p {
+    font-size: 0.75rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .hero-buttons {
+    margin-bottom: 3rem !important;
+    gap: 0.5rem !important;
+  }
+  
+  .hero-buttons a {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.75rem !important;
+  }
+  
+  .scroll-indicator {
+    bottom: 0.5rem !important;
+  }
+  
+  .scroll-indicator i {
+    font-size: 1rem !important;
+  }
+}
+
+/* Extra small height devices (iPhone SE in landscape, etc.) */
+@media screen and (max-height: 450px) {
+  .hero-section-mobile {
+    padding-top: 3rem !important;
+  }
+  
+  .hero-brand-text {
+    padding-bottom: 0.5rem !important;
+  }
+  
+  .hero-main-content {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+  
+  .hero-buttons {
+    margin-bottom: 2rem !important;
+  }
+}
+
     </style>
 </head>
 <body class="font-sans antialiased">
@@ -437,47 +503,59 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section class="relative min-h-screen flex flex-col justify-between overflow-hidden hero-section-mobile">
         <!-- Background Image -->
         <div class="absolute inset-0">
-            <img src="assets/images/Back_Cover.png" alt="Professional Background" class="w-full h-full object-cover">
+            <img src="assets/images/Back_Cover_1.svg" alt="Professional Background" class="w-full h-full object-cover">
         </div>
         
-        <!-- Main content -->
-        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex items-end min-h-screen pb-20">
-            <div class="animate-slide-up w-full mt-32">
-                <h1 class="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
+        <!-- DEXPERTS Brand Text Overlay (Upper Section) -->
+        <div class="relative z-10 text-center pt-24 sm:pt-32 md:pt-48 lg:pt-56 pb-2 sm:pb-4 hero-brand-text">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-1 sm:mb-2 leading-tight tracking-wide">
+                    DEXPERTS
+                </h1>
+                <p class="text-base sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl text-white/90 font-light tracking-wide mb-3 sm:mb-6">
+                    The Smart Solutions
+                </p>
+            </div>
+        </div>
+        
+        <!-- Main Content Section (Lower Section) -->
+        <div class="relative z-10 flex-grow flex items-center justify-center py-4 sm:py-6 hero-main-content">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 leading-tight">
                     Survey Research Automation Tools & 
                     <span class="block text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-purple-200">
                         XML Generation Solutions
                     </span>
-                </h1>
+                </h2>
                 
-                <p class="text-lg md:text-xl text-blue-100 mb-6 max-w-2xl mx-auto leading-relaxed">
+                <p class="text-sm sm:text-base md:text-xl text-blue-100 mb-4 sm:mb-6 max-w-2xl mx-auto leading-relaxed">
                     Generate XML for Decipher projects in seconds. Transform your survey research workflow with our innovative automation tools.
                 </p>
                 
-                <div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
-                    <a href="services/" class="bg-white text-dexperts-blue px-6 py-3 rounded-full font-semibold text-base hover:bg-blue-50 transition-all duration-300 hover:scale-105 shadow-xl">
+                <div class="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center items-center mb-16 sm:mb-20 md:mb-8 hero-buttons">
+                    <a href="services/" class="w-full sm:w-auto bg-white text-dexperts-blue px-5 sm:px-6 py-2.5 sm:py-3 rounded-full font-semibold text-sm sm:text-base hover:bg-blue-50 transition-all duration-300 hover:scale-105 shadow-xl">
                         <i class="fas fa-rocket mr-2"></i>
                         Explore Our Tools
                     </a>
-                    <a href="portfolio/" class="border-2 border-white text-white px-6 py-3 rounded-full font-semibold text-base hover:bg-white hover:text-dexperts-blue transition-all duration-300 hover:scale-105">
+                    <a href="portfolio/" class="w-full sm:w-auto border-2 border-white text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full font-semibold text-sm sm:text-base hover:bg-white hover:text-dexperts-blue transition-all duration-300 hover:scale-105">
                         <i class="fas fa-eye mr-2"></i>
                         View Portfolio
                     </a>
                 </div>
             </div>
-            
-            <!-- Scroll indicator -->
-            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer hover:scale-110 transition-transform duration-300" 
-                 onclick="scrollToNextSection()" 
-                 title="Scroll to features section"
-                 role="button" 
-                 tabindex="0"
-                 aria-label="Scroll to features section">
-                <i class="fas fa-chevron-down text-white text-2xl hover:text-blue-300 transition-colors"></i>
-            </div>
+        </div>
+        
+        <!-- Scroll indicator - positioned to avoid button overlap -->
+        <div class="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer hover:scale-110 transition-transform duration-300 z-20 scroll-indicator" 
+             onclick="scrollToNextSection()" 
+             title="Scroll to features section"
+             role="button" 
+             tabindex="0"
+             aria-label="Scroll to features section">
+            <i class="fas fa-chevron-down text-white text-xl sm:text-2xl hover:text-blue-300 transition-colors"></i>
         </div>
     </section>
     <!-- Features Section -->
